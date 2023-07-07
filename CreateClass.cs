@@ -123,9 +123,5 @@
           SELECT owner, view_name AS table_name FROM sys.all_views) t
             ON col.owner = t.owner AND col.table_name = t.table_name
    WHERE     col.table_name = :PAR_TABLO_ADI
-         AND col.column_name NOT IN ('INSERT_USER',
-                                     'INSERT_DATETIME',
-                                     'UPDATE_USER',
-                                     'UPDATE_DATETIME',
-                                     'TAMIM_ID')
+       
 ORDER BY col.column_id
